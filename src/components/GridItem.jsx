@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{ useState, useCallback  } from "react";
 import styled from "@emotion/styled";
 import BeerModal from "./Modal/BeerModal";
 
@@ -47,7 +47,7 @@ const GridItem =({item}) => {
             <Image src={item.image_url} alt='image'/>
             <Btn  onClick={() => setModalActive(true)}>show more</Btn>
 
-            <BeerModal active={modalActive} setActive={setModalActive} >
+            <BeerModal active={modalActive} setActive={setModalActive}  >
                 <Text >
                     {item.name}
                 </Text>
