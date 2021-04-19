@@ -14,7 +14,6 @@ const Home = styled.div`
 const Homepage = () => {
   return (
     <>
-      <Navbar />
       <div className="container">
         <Home>
           <h1>Hello, Carlyle !</h1>

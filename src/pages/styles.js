@@ -39,11 +39,17 @@ export default makeStyles((theme) => ({
     image: {
         width:'100%',
         padding: 10,
-        overflow: "hidden"
     },
     pic : {
         display: "block",
+        width:'200px',
+        overflow: "hidden"
+
+    },
+    block : {
         width:'100%',
+        minHeight : '60vh',
+        display: "flex",
     },
     paper: {
         marginTop: theme.spacing(3),

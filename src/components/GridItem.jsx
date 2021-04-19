@@ -1,7 +1,7 @@
 import React,{ useState } from "react";
 import styled from "@emotion/styled";
 import BeerModal from "./Modal/BeerModal";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Gitem = styled.div`
     background-color: antiquewhite;
@@ -42,11 +42,12 @@ const Btn = styled.button`
 const GridItem =({item}) => {
     const [modalActive, setModalActive] = useState(false)
     return (
-        <Gitem component = {Link}
-        to = {{ pathname : 'article/' + item.id,
-            state : item }}
-        >
+        <>
+        <Gitem>
+            <Link to ={{ pathname :  '/beer/' + item.id ,
+                         state : item                          } }>
             <h3>{item.name}</h3>
+            </Link>
             <Image src={item.image_url} alt='image'/>
             <Btn  onClick={() => setModalActive(true)}>show more</Btn>
 
@@ -54,6 +55,7 @@ const GridItem =({item}) => {
                 <Text >
                     {item.name}
                 </Text>
+
                 <Text >
                     {item.tagline}
                 </Text>
@@ -66,8 +68,11 @@ const GridItem =({item}) => {
                 </Text>
 
             </BeerModal>
+
         </Gitem>
+        </>
     );
+
 }
 
 export default GridItem;

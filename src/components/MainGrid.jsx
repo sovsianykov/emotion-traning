@@ -1,10 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import styled from "@emotion/styled";
 import GridItem from "./GridItem";
-import api from '../modules/api/api'
-import {BEERS} from "../modules/api/endpoints";
 import {useDispatch, useSelector} from "react-redux";
-import {apiActions, fetchAll} from "../modules/api/actions";
+import { fetchAll} from "../modules/api/actions";
 
 const Grid = styled.div`
     width: 100% ;
@@ -17,7 +15,6 @@ const Grid = styled.div`
 
 const MainGrid =() => {
     const dispatch = useDispatch()
-    // const [items, setItems ] = useState([])
     useEffect(() =>{
         dispatch(fetchAll())
 

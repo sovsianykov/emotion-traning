@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import styled from "@emotion/styled";
+import {Link} from "react-router-dom";
 
 const Navb = styled.nav`
   position: fixed;
@@ -35,7 +36,9 @@ const Navbar = () => {
      <Fragment>
          <div className="container">
              <Navb>
-                 <Brand>Emotions</Brand>
+                 <Link to = {'/'}>
+                     <Brand>Emotions</Brand>
+                 </Link>
                  <Input type="text" />
              </Navb>
          </div>
