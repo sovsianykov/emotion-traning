@@ -10,7 +10,8 @@ function initApiState() {
              loading : false,
              error : null
          };
-       acc[next] = inner;
+       acc[camelCase(next)] = inner;
+       return acc;
     },{})
 }
 

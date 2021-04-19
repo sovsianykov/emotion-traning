@@ -10,13 +10,13 @@ class Routing extends React.Component{
         return (
             <div>
                 <Switch>
-                    <Route exact path="/">
-                        <Homepage/>
-                    </Route>
-                    <Route path="/beer/:id">
-                        <Detailpage/>
-                    </Route>
-                </Switch>
+                <Route exact path="/">
+                    <Homepage/>
+                </Route>
+                <Route path="/beer/:id">
+                    <Detailpage/>
+                </Route>
+            </Switch>
 
             </div>
         )
