@@ -4,7 +4,7 @@ import {API_ACTIONS} from "./actions";
 
 
 function initApiState() {
-    return Object.keys(ENDPOINTS).reduce((acc, next) => {
+    return Object.keys(ENDPOINTS).reduce((acc, next) =>{
          const inner = {
              data : null,
              loading : false,
